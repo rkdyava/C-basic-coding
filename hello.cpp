@@ -1,5 +1,5 @@
 
-// my first program in C++
+// my factors program in C++
 #include <iostream>
 using namespace std;
 
