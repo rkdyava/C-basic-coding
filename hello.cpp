@@ -1,25 +1,51 @@
 
-// my factors program in C++
+// my first program in C++
 #include <iostream>
 using namespace std;
 
 int main()
 {    
-    int number, i;
+    int number, i, option;
+bool prime=true;
 
-    cout << "Enter an integer: "<<endl;
-    cin >> number;
+    	cout<< "select the mathametical operation"<<endl
+	<< "Factors enter: 1"<<endl
+	<<"Prime number enter:2"<<endl
+	<<"empty"<<endl;
+	cin>>option;
 
-    cout << "Factors of" << number<<" is:"<<endl;
+    	cout << "Enter an integer: "<<endl;
+
+    	cin >> number;
+
+if(option==1)
+{
+cout << "Factors of" << number<<" is:"<<endl;
 for(i=1;i<=number;i++)
 {
 if(number%i==0)
 cout<< i <<endl;
-else
-cout<<"---"<<endl;
+}
 
+} 
+if(option==2) 
+{
+	for(i=2;i<=number/2;++i)
+	{
+	if(number % i == 0)
+	{
+		prime=false;
+		break;
+	}
 
-}    
+	}
+
+	if(prime)
+	cout<<number<<"--->This number is a prime "<<endl;
+	else
+	cout<<number<<"--->This number is not a prime"<<endl;
+}  
+
     return 0;
 }
 
